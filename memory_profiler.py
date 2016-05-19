@@ -620,6 +620,7 @@ def show_results(prof, stream=None, precision=1):
             tmp = template.format(lineno, mem, inc, all_lines[lineno - 1])
             stream.write(unicode(tmp, 'UTF-8'))
         stream.write(u'\n\n')
+    stream.flush()
 
 
 def _func_exec(stmt, ns):
